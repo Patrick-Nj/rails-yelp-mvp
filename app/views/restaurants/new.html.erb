@@ -1,0 +1,17 @@
+<%= form_for(restaurant) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: 'Surpriz', class: 'coucou' %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+   <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %>
+   <%= f.label :rating %>
+  <%= f.text_field :category%>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <% if restaurant.persisted? %>
+    <%= f.submit 'Edit restaurant' %>
+  <% else %>
+    <%= f.submit 'Create restaurant' %>
+  <% end %>
+<% end %>
